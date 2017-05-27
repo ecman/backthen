@@ -1,0 +1,38 @@
+{
+  "name": "backthen",
+  "version": "1.0.0",
+  "description": "Run a callback as a thenable",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover test",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecman/backthen.git"
+  },
+  "keywords": [
+    "promises",
+    "thenable",
+    "then",
+    "callback",
+    "promise",
+    "ecman"
+  ],
+  "author": "ecman <its.ec@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecman/backthen/issues"
+  },
+  "homepage": "https://github.com/ecman/backthen#readme",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5"
+  }
+}
