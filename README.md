@@ -1,5 +1,7 @@
 # backthen
 
+[![build status](https://api.travis-ci.org/ecman/backthen.png)](https://travis-ci.org/ecman/backthen) [![codecov](https://codecov.io/gh/ecman/backthen/branch/master/graph/badge.svg)](https://codecov.io/gh/ecman/backthen) [![Code Climate](https://codeclimate.com/github/ecman/backthen/badges/gpa.svg)](https://codeclimate.com/github/ecman/backthen)
+
 Run a callback as a thenable
 
 # Usage
