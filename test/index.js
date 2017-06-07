@@ -17,6 +17,10 @@ function basicCallback(callback) {
   callback(null);
 }
 
+process.on('unhandledRejection', function (err, promise) {
+  throw err;
+});
+
 backthen(fs.stat, null, __filename)
   .then(function (stat) {
     assert.strictEqual(
@@ -59,8 +63,10 @@ backthen(scoped.cb, scoped, null, null)
       'Rejections should give an error');
   })
   .catch(function (err) {
-    assert.ok(util.isError(err), 
+    assert.strictEqual(util.isError(err), true,
       'Rejections should give an error');
+    assert.strictEqual(err instanceof TypeError, true,
+      'scoped callback jejections should have a TypeError');
     console.log('reject with error OK');
   });
 
