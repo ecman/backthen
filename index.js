@@ -9,11 +9,10 @@ function backthen() {
     Array.prototype.push.call(args,
       function () {
         if (util.isError(arguments[0])) {
-          return rej(err);
+          return rej(arguments[0]);
         }
         Array.prototype.splice.call(arguments, 0, 1);
-        var len = arguments.length;
-        switch (len) {
+        switch (arguments.length) {
           case 0:
             return ful();
           case 1:
